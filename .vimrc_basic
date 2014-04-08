@@ -1,0 +1,27 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""
+"   File:   .vimrc_basic
+"   Author: Rykka
+"   Update: 2012-08-22
+"   Summary: Contains basic settings of vimrc.
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Target:
+" a clean and can be easily setted vimrc settings.
+" TODO
+" people can search and install and update it like bundles.
+"
+" Style:
+" emacs, vi , windows
+"
+"
+"
+" functions and variables
+" history, backup, swap, session, buffer
+" formats: tab, indent, del, comment
+" programs: ctag shell crypt ...
+" multibyte
+" font 
+" color
+" map, menu , command,
+" mouse
+" pum, complete
+" new feature

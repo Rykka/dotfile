@@ -1,0 +1,57 @@
+" vim:set ft=pentadactyl:
+set! browser.tabs.closeWindowWithLastTab=false
+set complete=suggestion,location,file
+
+set passkeys+=towords.com:abcdrABCDR<space><cr>
+set passkeys+=*:<c-c>
+command! wiki -complete search -nargs=* tabopen wiki <args>
+
+" Loading "{{{1
+map <space>vr :source ~/.pentadactylrc<cr>
+
+noremap s :stop<cr>
+noremap S :stopall<cr>
+map <space>R :reloada !<cr>
+map <space>r :reloada<cr>
+" Basic "{{{1
+noremap d ;
+noremap ; :
+map <c-q> <Nop>
+nmap <c-q> <Nop>
+imap <c-q> <Nop>
+Imap <c-q> <Nop>
+tmap <c-q> <Nop>
+cmap <c-q> <Nop>
+vmap <c-q> <Nop>
+omap <c-q> <Nop>
+noremap q <Nop>
+noremap Q  <Nop>
+
+map <c-j> <Nop>
+map <c-k> <Nop>
+
+" Window "{{{1
+noremap <c-w>   <Nop>
+noremap <c-w><c-w> gt
+noremap <c-w><c-e> gT
+noremap <c-w><c-q> :tabclose<cr>
+noremap <c-w><c-x> :tabclose<cr>
+noremap <c-w><c-z> <c-s-t>
+noremap <c-w><c-s> <c-s-e>
+noremap <c-w><c-p> :bp<cr>
+noremap <c-w><c-n> :bN<cr>
+
+noremap <c-w>P  :pin<cr>
+noremap <c-w>U  :unpin<cr>
+
+
+nnoremap <s-tab> gT
+
+nnoremap <m-up> gu  
+
+" Edit "{{{1
+map <c-c> <yank-word>
+nmap <c-s> :redraw<cr>
+nor <F1> y:tabopen http://translate.google.com.hk/translate?act=url&hl=en&ie=UTF8&prev=_t&sl=auto&tl=zh-CN&u=<C-V><C-V><CR>
+vno <F1> <yank-word>:tabopen http://translate.google.cn/?hl=en#auto|zh-CN|<C-V><C-V><CR>
+

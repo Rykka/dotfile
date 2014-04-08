@@ -1,0 +1,41 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+cd ~/
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +96 Dropbox/dotfiles/.vimrc
+silent! argdel *
+set lines=38 columns=136
+winpos 0 24
+edit Dropbox/dotfiles/.vimrc
+set splitbelow splitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+let s:l = 96 - ((37 * winheight(0) + 18) / 36)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+96
+normal! 019l
+lcd ~/Dropbox/dotfiles
+tabnext 1
+if exists('s:wipebuf')
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=6 winwidth=5 shortmess=filnxtToOAs
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+let g:this_obsession = v:this_session
+unlet SessionLoad
+" vim: set ft=vim :

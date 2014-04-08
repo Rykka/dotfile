@@ -1,0 +1,6 @@
+URxvt.depth: 32
+URxvt.background: [95]#000000
+URxvt.foreground: [95]#BBBBBB
+URxvt.font: xft:monaco:size=12
+URxvt*termName:screen-256color
+URxvt.scrollBar: false
