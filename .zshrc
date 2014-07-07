@@ -45,6 +45,18 @@ bindkey '^[[B' history-beginning-search-forward
 setopt auto_cd
 
 export EDITOR='gvim'
+
+
+# Proxy Tools
+alias -g ssh1='sh -c ~/Documents/Scripts/sshgfw.sh'
+alias -g ssh2='sh -c ~/Documents/Scripts/sshgfw2.sh'
+alias -g sshp='ssh -D 7070 ryk@xehost0'
+alias -g gae='python2 ~/Documents/net/goagent/local/proxy.py'
+alias -g goae='python2 /opt/goagent/local/proxy.py'
+alias -g wpx='python2 ~/Documents/net/wallproxy-plus/local/startup.py'
+alias -g ovpn='sudo openvpn --script-security 2 --config ~/ovpn-client/client.conf'
+
+
 alias -g cp='cp'
 alias -g mv='mv'
 alias -g rm='rm'
@@ -54,11 +66,6 @@ alias -g ll='ls -l -h'
 alias -g lsg='ls -l | grep --color=auto'
 alias -g grep='grep --color=auto'
 alias -g psg='ps aux | grep --color=auto'
-alias -g ssh1='sh -c ~/Documents/Scripts/sshgfw.sh'
-alias -g ssh2='sh -c ~/Documents/Scripts/sshgfw2.sh'
-alias -g gae='python2 ~/Documents/net/goagent/local/proxy.py'
-alias -g goae='python2 /opt/goagent/local/proxy.py'
-alias -g wpx='python2 ~/Documents/net/wallproxy-plus/local/startup.py'
 alias -g lsg='ls -a | grep --color=auto'
 alias -g gvimr='gvim --remote-tab'
 alias -g ee='emacsclient -t'
@@ -67,20 +74,27 @@ alias -g :e='vim'
 alias -g na='nautilus `pwd`'
 alias -g vact='source bin/activate'
 alias -g vdac='deactivate'
-alias -g djm='python manage.py '
 alias -g dja='django-admin.py '
 alias -g sencha='/home/ryk/bin/Sencha/Cmd/4.0.1.45/sencha'
+
+alias -g lrc='~/.scripts/lrcdis -m echo >! /tmp/lrc &'
+alias -g klrc='pkill lrcdis'
+
+
+# Django
+alias -g djm='python manage.py '
 alias -g djmr='python manage.py runserver 8080'
 alias -g djmsa='python manage.py schemamigration --auto'
 alias -g djmsi='python manage.py schemamigration --initial'
 alias -g dja='django-admin.py '
-alias -g lrc='~/.scripts/lrcdis -m echo >! /tmp/lrc &'
-alias -g klrc='pkill lrcdis'
-alias -g sshp='ssh -D 7070 ryk@xehost0'
+
+
+# Project
 alias -g gga='git add .'
 alias -g ggc='git commit -m '
 alias -g ggp='git push'
 alias -g fad='fab deploy'
+
 alias bower='noglob bower'
 
 IEM="$HOME/gitplace/lesscolor/iem"
@@ -129,10 +143,17 @@ alias -s java=$EDITOR
 alias -s txt=$EDITOR
 alias -s PKGBUILD=$EDITOR
 
-PATH=$PATH:~/.gem/ruby/1.9.1/bin/:~/bin:/local/usr/bin:~/DevTools/ADT/sdk/tools/:~/DevTools/ADT/sdk/platform-tools/
+PATH=$PATH:~/.gem/ruby/1.9.1/bin/:~/bin:/local/usr/bin:~/Tools/Android/sdk/tools/:~/Tools/Android/sdk/platform-tools/:/usr/lib/jvm/java-7-openjdk-amd64/bin:~/Tools/Android/eclipse
+
+# Installed java in ubuntu 64 for android SDK
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export ANT_HOME=/usr/share/ant
+
+
 # virtualenv wrapper
 export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=~/workspace
+
 PATH="$PATH:/opt/vagrant/bin"
 
 if [[ -x /usr/bin/virtualenvwrapper.sh ]] then

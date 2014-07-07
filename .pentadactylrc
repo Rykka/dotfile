@@ -1,7 +1,7 @@
 " vim:set ft=pentadactyl:
 set! browser.tabs.closeWindowWithLastTab=false
-set complete=suggestion,location,file
-
+" set complete=suggestion,location,file
+set go+=T
 set passkeys+=towords.com:abcdrABCDR<space><cr>
 set passkeys+=*:<c-c>
 command! wiki -complete search -nargs=* tabopen wiki <args>

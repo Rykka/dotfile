@@ -1,7 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""
 "  Script: Rykka's Vimrc
 "  Author: Rykka <Rykka10(at)gmail.com>
-"  Update: 2014-04-08
+"  Update: 2014-07-07
 "  License: WTFPL v2.0 
 " vim:ft=vim tw=0 sw=4 ts=4 sts=4 fdm=marker fdls=0 :
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -2142,6 +2142,9 @@ let g:riv_projects = [proj1,proj2,proj3,proj4,proj5,proj6]
 " let g:virtualenv_directory = '~/vir/'
 let g:riv_fold_text_align = 'right'
 let g:riv_file_link_ext = 'vim,cpp,c,py,rb,lua,pl,html,htm'
+" let g:riv_file_ext_link_hl = 'vim,cpp,c,py,rb,lua,pl,html,htm'
+let g:riv_highlight_code = 'lua,python,cpp,javascript,vim,sh,jinja'
+
 
 
 " let g:riv_fold_auto_update = 0
