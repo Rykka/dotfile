@@ -55,6 +55,7 @@ alias -g gae='python2 ~/Documents/net/goagent/local/proxy.py'
 alias -g goae='python2 /opt/goagent/local/proxy.py'
 alias -g wpx='python2 ~/Documents/net/wallproxy-plus/local/startup.py'
 alias -g ovpn='sudo openvpn --script-security 2 --config ~/ovpn-client/client.conf'
+alias -g jovpn='sudo openvpn --script-security 2 --config ~/ovpn-client/Jmai-vpn/ca.soh.re.ovpn'
 
 
 alias -g cp='cp'
@@ -67,7 +68,7 @@ alias -g lsg='ls -l | grep --color=auto'
 alias -g grep='grep --color=auto'
 alias -g psg='ps aux | grep --color=auto'
 alias -g lsg='ls -a | grep --color=auto'
-alias -g gvimr='gvim --remote-tab'
+alias -g gvr='gvim --remote-tab'
 alias -g ee='emacsclient -t'
 alias -g mp='./manage.py'
 alias -g :e='vim'
@@ -79,6 +80,7 @@ alias -g sencha='/home/ryk/bin/Sencha/Cmd/4.0.1.45/sencha'
 
 alias -g lrc='~/.scripts/lrcdis -m echo >! /tmp/lrc &'
 alias -g klrc='pkill lrcdis'
+alias -g shadow='shadowsocks-gtk &'
 
 
 # Django

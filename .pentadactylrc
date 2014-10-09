@@ -4,6 +4,7 @@ set! browser.tabs.closeWindowWithLastTab=false
 set go+=T
 set passkeys+=towords.com:abcdrABCDR<space><cr>
 set passkeys+=*:<c-c>
+set ds='bing'
 command! wiki -complete search -nargs=* tabopen wiki <args>
 
 " Loading "{{{1
